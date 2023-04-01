@@ -7,7 +7,7 @@ using static System.Math;
 
 namespace GradeBook.GradeBooks
 {
-    internal class RankedGradeBook:BaseGradeBook
+    public class RankedGradeBook:BaseGradeBook
     {
         public  RankedGradeBook(string name) : base(name)
         {
@@ -59,6 +59,11 @@ namespace GradeBook.GradeBooks
                 Console.WriteLine("Ranked grading requires at least 5 students.");
             else
                 base.CalculateStatistics();
+        }
+
+        public override void CalculateStudentStatistics(string name)
+        {
+            base.CalculateStudentStatistics(name);
         }
     }
 }
